@@ -1,5 +1,5 @@
 {% set name = "ipytablewidgets" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ipytablewidgets-{{ version }}.tar.gz
-  sha256: 87cb9318d2b277b548cad1fb9f3fca6e874ee53ab39c67e19f600968f189f04d
+  sha256: d78bc88a1fabfcf1cbc61806dbd62dc2ea2c4812e97b00f60a5b96a47dbea4b7
 
 build:
   noarch: python
