@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@xtianpoli](https://github.com/xtianpoli/)
 
