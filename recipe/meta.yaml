@@ -1,5 +1,5 @@
 {% set name = "ipytablewidgets" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ipytablewidgets-{{ version }}.tar.gz
-  sha256: d78bc88a1fabfcf1cbc61806dbd62dc2ea2c4812e97b00f60a5b96a47dbea4b7
+  sha256: 08691bfff98b526932bfe8665495f9fb4e091827f0f93b5f0713135d6d1b86cc
 
 build:
   noarch: python
@@ -27,8 +27,8 @@ requirements:
     - ipywidgets >=7.5.0,<9
     - traitlets >=4.3.0
     - traittypes >=0.0.6
-    - numpy >=1.10.4,<2.0.0
-    - pandas >=1.0.0,<2.0.0
+    - numpy >=1.10.4,<3.0.0
+    - pandas >=1.0.0,<3.0.0
     - lz4
 
 test:
