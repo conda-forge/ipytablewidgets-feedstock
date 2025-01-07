@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ipytablewidgets-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ipytablewidgets-{{ version }}.tar.gz
   sha256: 08691bfff98b526932bfe8665495f9fb4e091827f0f93b5f0713135d6d1b86cc
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - jupyter_packaging >=0.10,<2
     - jupyterlab >=3.0.0,<3.7
     - setuptools >=40.8.0
     - wheel
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - ipywidgets >=7.5.0,<9
     - traitlets >=4.3.0
     - traittypes >=0.0.6
@@ -38,6 +38,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/progressivis/ipytablewidgets
